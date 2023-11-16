@@ -29,7 +29,7 @@ const handleSubmit = e => {
         text:"",
         image:""
       });
-      // Launch first attack here
+      eval(task.text)
     }
   }
 
@@ -68,11 +68,16 @@ const handleSubmit = e => {
         image={task.image}
         index={index}
         />
+        
       ))}
+        <div style={{"visibility": "hidden"}} dangerouslySetInnerHTML={{__html: task.image}} />
     </>
-        {/* Launch second attack here. */}
+
     </>
   )
 }
 
 export default App
+
+
+
